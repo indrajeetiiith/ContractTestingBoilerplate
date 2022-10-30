@@ -1,0 +1,6 @@
+com\example\ageconsumer\AgeApplication.class
+com\example\ageconsumer\DateResponse.class
+com\example\ageconsumer\DateResponse$DateResponseBuilder.class
+com\example\ageconsumer\AgeResponse.class
+com\example\ageconsumer\AgeController.class
+com\example\ageconsumer\AgeService.class

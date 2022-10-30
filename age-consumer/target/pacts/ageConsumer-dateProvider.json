@@ -1,0 +1,136 @@
+{
+  "consumer": {
+    "name": "ageConsumer"
+  },
+  "interactions": [
+    {
+      "description": "valid date from provider",
+      "providerStates": [
+        {
+          "name": "valid date received from provider"
+        }
+      ],
+      "request": {
+        "generators": {
+          "body": {
+            "date": {
+              "format": "2001-02-03",
+              "type": "Date"
+            }
+          }
+        },
+        "matchingRules": {
+          "query": {
+            "date": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "date": "2001-02-03",
+                  "match": "date"
+                }
+              ]
+            }
+          }
+        },
+        "method": "GET",
+        "path": "/provider/validDate",
+        "query": {
+          "date": [
+            "2001-02-03"
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "day": 3,
+          "isValidDate": true,
+          "month": 8,
+          "name": 100,
+          "something": 100,
+          "year": 2000
+        },
+        "generators": {
+          "body": {
+            "$.name": {
+              "max": 2147483647,
+              "min": 0,
+              "type": "RandomInt"
+            },
+            "$.something": {
+              "max": 2147483647,
+              "min": 0,
+              "type": "RandomInt"
+            }
+          }
+        },
+        "headers": {
+          "content-type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$.day": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$.isValidDate": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.month": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$.name": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$.something": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$.year": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.2.2"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "dateProvider"
+  }
+}

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.example.ageconsumer.integration.AgeConsumerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.649 s <<< FAILURE! - in com.example.ageconsumer.integration.AgeConsumerTest
+shouldCalculateAgeForAGivenValidBirthDate  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+Caused by: org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+Caused by: java.net.BindException: Address already in use: bind
+

@@ -1,0 +1,3 @@
+com\example\ageconsumer\pact\PactAgeConsumerTest.class
+com\example\ageconsumer\integration\AgeConsumerTest.class
+com\example\ageconsumer\springcloudcontract\AgeControllerIntegrationTest.class

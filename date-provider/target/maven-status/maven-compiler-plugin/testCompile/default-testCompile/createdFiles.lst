@@ -1,0 +1,4 @@
+com\example\dateprovider\springcloudcontract\ContractVerifierTest.class
+com\example\dateprovider\springcloudcontract\BaseTestClass.class
+com\example\dateprovider\swaggervalidator\AgeProviderSwaggerValidatorTest.class
+com\example\dateprovider\pact\PactAgeProviderTest.class

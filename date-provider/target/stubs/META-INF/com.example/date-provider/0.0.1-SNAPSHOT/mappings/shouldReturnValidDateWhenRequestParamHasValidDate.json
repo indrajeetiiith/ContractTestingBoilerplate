@@ -1,0 +1,26 @@
+{
+  "id" : "8e4765d1-31e7-4db3-99f9-c979fe64a450",
+  "request" : {
+    "urlPath" : "/provider/validDate",
+    "method" : "GET",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "queryParameters" : {
+      "date" : {
+        "matches" : "(\\d\\d\\d\\d)-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"givenDate\":\"2001-02-03\",\"year\":\"2001\",\"month\":\"2\",\"day\":\"3\",\"isValidDate\":true,\"message\":\"date parsed successfully\"}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "8e4765d1-31e7-4db3-99f9-c979fe64a450"
+}
