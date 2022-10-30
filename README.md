@@ -1,3 +1,6 @@
+it is not my work. it's copied from https://github.com/SrinivasanTarget/ContractTestingBoilerplate
+
+
 # Contract Testing Boilerplate
 
 Contract Testing Boilerplate has two microservices developed using Spring Boot in a maven multi-module project.
